@@ -255,8 +255,11 @@ public class ListeSimpleTest {
         System.out.println(listeATester);
         assertEquals(listeATester.toString(), "ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))");
     }
+    
     @Test
     void testEchangerMemeNoeud() {
         Noeud noeud = new Noeud(10);
-        liste.echanger(noeud, noeud);    }
+        
+        liste.echanger(noeud, noeud);    
+    }
 }
