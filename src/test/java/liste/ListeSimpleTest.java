@@ -261,6 +261,7 @@ class ListeSimpleTest {
     void testEchangerMemeNoeud() {
         Noeud noeud = new Noeud(10, null);
         
-        listeATester.echanger(noeud, noeud);    
+        listeATester.echanger(noeud, noeud);
+        assertEquals("ListeSimple(Noeud(10))", listeATester.toString());
     }
 }
