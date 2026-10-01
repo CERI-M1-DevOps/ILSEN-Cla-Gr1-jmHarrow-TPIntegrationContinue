@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ListeSimpleTest {
+public class ListeSimpleTest {
 
     ListeSimple listeATester;
 
@@ -50,7 +50,10 @@ class ListeSimpleTest {
         listeATester.ajout(2);
         listeATester.ajout(3);
         System.out.println(listeATester);
-        assertEquals(listeATester.toString(), "ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1))");
+        listeATester.ajout(1);
+        listeATester.ajout(2);
+        listeATester.ajout(3);
+        assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1), Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
     }
 
     @Test
@@ -256,12 +259,13 @@ class ListeSimpleTest {
         System.out.println(listeATester);
         assertEquals("ListeSimple(Noeud(4), Noeud(2), Noeud(3), Noeud(1), Noeud(5))", listeATester.toString());
     }
-    
+
     @Test
     void testEchangerMemeNoeud() {
         Noeud noeud = new Noeud(10, null);
-        
+
         listeATester.echanger(noeud, noeud);
-        assertEquals("ListeSimple(Noeud(10))", listeATester.toString());
+
+        assertEquals("ListeSimple()", listeATester.toString());
     }
 }
