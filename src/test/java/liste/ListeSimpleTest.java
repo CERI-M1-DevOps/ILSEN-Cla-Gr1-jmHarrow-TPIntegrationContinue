@@ -258,8 +258,8 @@ public class ListeSimpleTest {
     
     @Test
     void testEchangerMemeNoeud() {
-        Noeud noeud = new Noeud(10);
+        Noeud noeud = new Noeud(10, null);
         
-        liste.echanger(noeud, noeud);    
+        listeATester.echanger(noeud, noeud);    
     }
 }
